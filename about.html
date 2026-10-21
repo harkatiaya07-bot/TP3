@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Coffee House</title>
+
+    <link rel="stylesheet" href="assets/css/boostrap.min.css"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f3ed;
+        }
+
+        .navbar {
+            background-color: #211914;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            color: #d9a066;
+        }
+
+        .logo {
+            color: #d9a066;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .about-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about-section h1 {
+            color: #5c3825;
+            margin-bottom: 25px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #44352c;
+        }
+
+        .about-section img {
+            width: 100%;
+            max-width: 700px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .values {
+            background-color: #ead8c5;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        footer {
+            background-color: #211914;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 400px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .nav-left, .nav-right {
+                gap: 15px;
+            }
+
+            .logo {
+                order: -1;
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar a {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+        </div>
+
+        <div class="logo">Coffee House</div>
+
+        <div class="nav-right">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <h1>About Coffee House</h1>
+
+        <p>
+            Welcome to Coffee House, a place where coffee lovers
+            can enjoy delicious drinks and relaxing moments.
+        </p>
+
+        <p>
+            We believe that a good cup of coffee can make your day
+            better. Our goal is to offer tasty coffee, friendly service,
+            and a warm atmosphere for everyone.
+        </p>
+
+        <div class="values">
+            <h2>Our Mission</h2>
+
+            <p>
+                Our mission is to serve high-quality coffee and make
+                every visit a special experience for our customers.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p> 2026 Coffee House. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

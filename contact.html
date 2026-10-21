@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Coffee House</title>
+
+    <link rel="stylesheet" href="assets/css/boostrap.min.css"/>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f3ed;
+        }
+
+        .navbar {
+            background-color: #211914;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            color: #d9a066;
+        }
+
+        .logo {
+            color: #d9a066;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .contact-section {
+            max-width: 650px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px #00000020;
+        }
+
+        .contact-section h1 {
+            text-align: center;
+            color: #5c3825;
+            margin-bottom: 25px;
+        }
+
+        .contact-section label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .contact-section input,
+        .contact-section textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-section button {
+            background-color: #5c3825;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .contact-section button:hover {
+            background-color: #d9a066;
+            color: #211914;
+        }
+
+        #message {
+            margin-top: 20px;
+            color: #276738;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #211914;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 400px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .nav-left, .nav-right {
+                gap: 15px;
+            }
+
+            .logo {
+                order: -1;
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar a {
+                font-size: 15px;
+            }
+
+            .contact-section {
+                margin: 30px 15px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+        </div>
+
+        <div class="logo">Coffee House</div>
+
+        <div class="nav-right">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+
+        <p>WELCOME!</p>
+
+        <form onsubmit="sendEmail(event)">
+
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            
+
+            <button type="submit">DONE</button>
+
+        </form>
+
+        <p id="message"></p>
+    </section>
+
+    <footer>
+        <p>2026 Coffee House. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function sendEmail(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+
+            document.getElementById("message").textContent =
+                "Thank you, " + name + "!";
+
+            document.querySelector("form").reset();
+        }
+    </script>
+
+</body>
+</html>
